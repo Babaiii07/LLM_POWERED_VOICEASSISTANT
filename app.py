@@ -35,7 +35,7 @@ def main():
     st.title("Multilingual AI Assistant 🤖")
     GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY")
     genai.configure(api_key=GOOGLE_API_KEY)  
-    model = genai.GenerativeModel(model_name='gemini-pro') 
+    model = genai.GenerativeModel(model_name='gemini-1.5-pro') 
     chat = model.start_chat(history=[])
     def llm_model_object(user_text):
         response=chat.send_message(user_text)
